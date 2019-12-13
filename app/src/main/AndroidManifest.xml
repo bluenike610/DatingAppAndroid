@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.datingapp.android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="com.android.vending.BILLING"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:screenOrientation="portrait"
+        android:hardwareAccelerated="true"
+        android:name="com.datingapp.android.myapplication.MyApplication"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.datingapp.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths">
+            </meta-data>
+
+        </provider>
+
+
+        <uses-library android:name="org.apache.http.legacy"
+            android:required="false" />
+
+
+        <activity android:name="com.datingapp.android.Splash_A"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name="com.datingapp.android.Accounts.Login_A"
+            android:screenOrientation="portrait"></activity>
+
+
+        <activity android:name="com.datingapp.android.Accounts.Login_Phone_A"
+            android:screenOrientation="portrait"
+            android:theme="@style/Login_phone_A"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"></activity>
+
+        <activity android:name=".Accounts.IntroActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".Accounts.LocationActivity" android:screenOrientation="portrait" />
+        <activity android:name=".Accounts.PhotoActivity" android:screenOrientation="portrait" />
+        <activity android:name=".Accounts.BirthdayActivity" android:screenOrientation="portrait" />
+        <activity android:name=".Accounts.NameActivity" android:screenOrientation="portrait" />
+        <activity android:name=".Accounts.GenderActivity" android:screenOrientation="portrait" />
+        <activity android:name=".Accounts.SMSCodeActivity" android:screenOrientation="portrait" />
+        <activity android:name=".Accounts.PhoneNumberActivity" android:screenOrientation="portrait" />
+        <activity android:name=".Accounts.LoginActivity" android:screenOrientation="portrait" />
+
+
+        <activity android:name="com.datingapp.android.Accounts.Get_User_Info_A"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"></activity>
+
+
+        <activity android:name="com.datingapp.android.Main_Menu.MainMenuActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/noactionbar_whiteStatus"></activity>
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+
+    <!--    &lt;!&ndash; for google map Api key &ndash;&gt;
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_debug_kay" />
+
+-->
+
+        <!-- for google map Api key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_debug_key" />
+
+
+        <activity
+            android:name="com.soundcloud.android.crop.CropImageActivity"
+            android:theme="@style/noactionbar_whiteStatus"
+            android:screenOrientation="portrait"/>
+
+
+        <meta-data android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_b" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/coloraccent" />
+
+
+        <service android:name="com.datingapp.android.Firebase_Notification.Notification_Receive">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+
+        <activity android:name="com.datingapp.android.GoogleMap.MapsActivity"></activity>
+
+        <activity android:name="com.datingapp.android.GoogleMap.SearchPlaces"></activity>
+
+    </application>
+
+</manifest>

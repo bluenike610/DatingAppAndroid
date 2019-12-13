@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Accounts.LoginActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/logo"
+        android:scaleType="centerCrop"/>
+
+    <RelativeLayout
+        android:id="@+id/fbLoginBtn"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/fb_btn">
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/fbWarning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/fb_warning"
+        android:layout_below="@+id/fbLoginBtn"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"/>
+
+    <RelativeLayout
+        android:id="@+id/phoneLoginBtn"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/fbWarning"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/phone_btn">
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/termsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/terms"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:id="@+id/privacyBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/privacy"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="12dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

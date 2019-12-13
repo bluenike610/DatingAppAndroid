@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="coloraccent">#ff6a6a</color>
+    <color name="white">#fff</color>
+    <color name="black">#2F2F2F</color>
+    <color name="graycolor">#D3D3D3</color>
+    <color name="gainsboro">#DCDCDC</color>
+    <color name="lightgraycolor">#f2f2f2</color>
+    <color name="darkgray">#93959A</color>
+    <color name="dimgray">#696969</color>
+    <color name="lightblack">#5d5d5d</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="green">#04b110</color>
+    <color name="light_white">#fffefe</color>
+    <color name="off_white">#f8f6f8</color>
+    <color name="light_blue">#00c5ec</color>
+    <color name="red">#c94844</color>
+    <color name="silver_gray">#617085</color>
+    <color name="light_ferozi">#dbf6fd</color>
+    <color name="delete_message_bg">#f2f2f2</color>
+    <color name="delete_message_text">#b8b8b8</color>
+    <color name="fiftypercenttranparent">#B3ffffff</color>
+    <color name="alphabet_text_selected_color">#3F51B5</color>
+    <color name="pink_color">#fa6565</color>
+
+    <color name="half_transfer">#42000000</color>
+    <color name="transfer">#00000000</color>
+    <color name="border_color">#8C8C8C</color>
+    <color name="background">#EFEFEF</color>
+    <color name="button">#E0E0E0</color>
+    <color name="SEPARATER_BCOLOR">#C8C7CC</color>
+    <color name="text_black">#222222</color>
+    <color name="text_gray">#8F8F8F</color>
+    <color name="text_code">#FA7268</color>
+    <color name="text_name">#C4C4C4</color>
+    <color name="phone_separate">#DCDCDC</color>
+    <color name="photo_back">#F4F4F4</color>
+    <color name="photo_alert">#F52D56</color>
+    <color name="no_purchased_like">#8763E6</color>
+    <color name="purchased_like">#FA7268</color>
+</resources>

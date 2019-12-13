@@ -1,0 +1,172 @@
+﻿<resources>
+    <string name="app_name">DatingApp</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="phonetext">Enter a phone number that can be used to verify your identity with a text message or phone call. </string>
+
+
+    <string name="facebook_app_id">fb_app_id</string>
+    <string name="fb_login_protocol_scheme">fb(fb_app_id)</string>
+
+
+    <!--    <string name="my_Interstitial_Add">ca-app-pub-3940256099942544/1033173712</string>-->
+
+
+    <string name="subscription_txt">By tapping “Continue”, your payment will be charged to your Google Play
+        account, and your subscription will automatically renew for the same
+        package length at the same price until you cancel it in settings in the
+        Google Play store at least 24 hours prior to the end of the current period.
+        By tapping “Continue”, you agree to our Privacy Policy and Terms.</string>
+
+
+    <!--if you install the app form android studio-->
+    <string name="google_debug_key">google_debug_api_key</string>
+
+    <!--if you install the app form Play store-->
+    <string name="google_release_key">google_release_api_key</string>
+
+
+    <!--debug key if install from android studio or release key if install from playstore-->
+    <string name="Places_api">google_places_api_key</string>
+
+
+    <string name="version">1.0</string>
+
+    <string name="device">android</string>
+
+
+    <!--　共通　-->
+    <string name="OK">OK</string>
+    <string name="Cancel">キャンセル</string>
+    <string name="YES">はい</string>
+    <string name="NO">いいえ</string>
+    <string name="Delete">削除</string>
+    <string name="Save">保存</string>
+    <string name="Back">戻り</string>
+    <string name="Edit">編集</string>
+    <string name="Send">送信</string>
+    <string name="next">次へ</string>
+    <string name="Connect">接続</string>
+    <string name="Register">登 録</string>
+    <string name="Exit">通話終了</string>
+
+    <!--　splash画面　-->
+    <string name="splash_logo">LOGO</string>
+    <string name="intro">＊＊のための\nマッチングサービス</string>
+    <string name="fb_warning">※Facebookには一切投稿されません</string>
+    <string name="fb_login_btn">Facebookでログイン</string>
+    <string name="phone_login_btn">電話番号でログイン</string>
+    <string name="terms">利用規約</string>
+    <string name="privacy">プライバシーポリシー</string>
+
+    <!--　phone画面　-->
+    <string name="phone_num">電話番号</string>
+    <string name="phone_num_intro">電話番号を入力してください。SMSで認証コードを送信します。</string>
+    <string name="sending_code_title">認証コード送信中</string>
+    <string name="verifying_code_title">コード検証中</string>
+    <string name="location_title">位置情報取得中</string>
+    <string name="sending_code_msg">しばらくお待ちください。</string>
+
+    <!--　phone verify画面　-->
+    <string name="phone_verify">認証コード</string>
+    <string name="phone_verify_intro">SMSで認証コードを送信しました。認証コードを入力してください。</string>
+    <string name="no_sms">SMSが届かない？</string>
+
+    <!--　性別画面　-->
+    <string name="gender_txt">性別</string>
+    <string name="gender_intro">性別を選択してください。</string>
+
+    <!--　名前画面　-->
+    <string name="name_txt">名前</string>
+    <string name="name_intro">10文字以内で名前を入力してください。</string>
+
+    <!--　生年月日画面　-->
+    <string name="birthday_txt">生年月日</string>
+    <string name="birthday_intro">生年月日を入力してください。</string>
+
+    <!--　写真画面　-->
+    <string name="photo_txt">写真</string>
+    <string name="photo_intro">プロフィール写真をアップしてください。</string>
+    <string name="photo_lert">写真を追加する</string>
+    <string name="photo_camera">カメラ</string>
+    <string name="photo_cameraroll">カメラロール</string>
+
+    <!--　位置情報画面　-->
+    <string name="location_txt">位置情報</string>
+    <string name="location_intro">アプリを利用するには位置情報をオンにしてください。</string>
+
+    <!--　自己紹介画面　-->
+    <string name="intro_txt">自己紹介</string>
+    <string name="intro_intro">プロフィール写真をアップしてください。</string>
+
+
+    <!--　ログイン画面　-->
+    <string name="database_connect_loading">ログイン中・・・</string>
+    <string name="webrtc_connect_loading">接続中・・・</string>
+    <string name="user_id">ユーザーID</string>
+    <string name="password">パスワード</string>
+    <string name="login">ログイン</string>
+    <string name="input_err_title">入力エラー</string>
+    <string name="input_err_msg">生年月日を正確に入力してください。</string>
+    <string name="login_err_title">ログイン失敗</string>
+    <string name="login_err_msg">ログインが失敗しました。</string>
+    <string name="server_connect_error_msg">データベースサーバーに接続できませんでした。スタンドアロンモードで起動しますか？</string>
+    <string name="login_err_msg1">データベース接続が失敗したため、ログインできません。\nネットワークの状態を確認してください。</string>
+    <string name="login_err_msg2">XMLファイルが存在しないため、ログインできません。\n本アプリを終了し、XMLファイルを追加した後、再度起動してください。</string>
+    <string name="login_err_msg3">本アプリは起動できません。\n本アプリを終了し、XMLファイルを追加した後、再度起動してください。</string>
+    <string name="select_xml_title">XMLファイルを選択してください。</string>
+    <string name="no_xml_title">エラー</string>
+    <string name="no_xml_msg">XMLファイルが存在しません。</string>
+    <string name="roomname_msg">room名を入力してください</string>
+    <string name="setting_msg">起動方式を選択してください</string>
+    <string name="setting_auto">自動</string>
+    <string name="setting_manual">手動</string>
+    <string name="start_msg">WEBコールチャイム\n\nコール中！</string>
+    <string name="start_btn">開 始</string>
+
+    <!--　 Detail画面　-->
+    <string name="report">通報</string>
+    <string name="report_msg">このユーザーを通報してもよろしいですか？</string>
+
+    <!--　 いいね画面　-->
+    <string name="like_num">いいね！</string>
+
+    <!--　 課金画面　-->
+    <string name="inapp_close">閉じる</string>
+    <string name="inapp_intro_1">あなたへのいいね！を見れる</string>
+    <string name="inapp_intro_2">メッセージ無制限</string>
+    <string name="inapp_intro_3">いいね！3倍</string>
+
+    <!--　 match画面　-->
+    <string name="match_continue">閲覧を続ける</string>
+    <string name="match_intro">マッチしました！今すぐメッセージを送りましょう！</string>
+
+    <!--　 Inbox画面　-->
+    <string name="inbox_title">メッセージ</string>
+    <string name="inbox_all_tab">全て</string>
+    <string name="inbox_match_tab">マッチ</string>
+    <string name="inbox_like_num">いいね</string>
+
+    <!--　 設定画面　-->
+    <string name="setting_title">設定</string>
+    <string name="purchase_title">有料会員購入</string>
+    <string name="purchase_state">現在 無料会員</string>
+    <string name="unpurchase_state">現在 有料会員</string>
+    <string name="show_title">表示</string>
+    <string name="filter_title">フィルター</string>
+    <string name="notification_title">通知</string>
+    <string name="privacy_title">プライバシーポリシー</string>
+    <string name="terms_title">利用規約</string>
+    <string name="restore_title">購入を復元</string>
+    <string name="report_title">サポート</string>
+    <string name="passport_title">身分証明書</string>
+    <string name="delete_account">アカウントを削除</string>
+
+    <!--　 設定画面　-->
+    <string name="profile_title">プロフィール</string>
+    <string name="job_title">職業</string>
+    <string name="preview_title">プレビュー</string>
+
+
+</resources>

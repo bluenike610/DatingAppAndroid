@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/d_top_bottom_border_line"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maximum Distance"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="mile"
+                android:id="@+id/distance_txt"
+                android:textColor="@color/dark_gray"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <com.zhouyou.view.seekbar.SignSeekBar
+            android:id="@+id/distance_bar"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:minHeight="16dp"
+            android:paddingTop="20dp"
+            app:ssb_max="100"
+            app:ssb_min="5"
+            app:ssb_progress="100"
+            app:ssb_second_track_color="@color/pink_color"
+            app:ssb_show_section_text="false"
+            app:ssb_show_thumb_text="false"
+            app:ssb_thumb_color="@color/pink_color"
+            app:ssb_thumb_radius="10dp"
+            app:ssb_track_color="@color/gainsboro"
+            app:ssb_track_size="5dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:background="@color/white">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age Range"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Year"
+                android:id="@+id/age_range_txt"
+                android:textColor="@color/dark_gray"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <com.zhouyou.view.seekbar.SignSeekBar
+            android:id="@+id/age_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            app:ssb_progress="50"
+            app:ssb_min="18"
+            app:ssb_max="75"
+            app:ssb_thumb_radius="10dp"
+            android:paddingTop="15dp"
+            app:ssb_second_track_color="@color/pink_color"
+            app:ssb_thumb_color="@color/pink_color"
+            app:ssb_track_color="@color/gainsboro"
+            app:ssb_track_size="5dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Cancel"
+            android:textStyle="bold"
+            android:id="@+id/cancel_btn"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textAllCaps="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Update"
+            android:id="@+id/update_btn"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:background="@color/pink_color"
+            android:textColor="@color/white"
+            android:textAllCaps="true"/>
+    </LinearLayout>
+</LinearLayout>

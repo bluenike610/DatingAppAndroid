@@ -1,0 +1,552 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.datingapp.android.Settings.Setting_F">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5">
+
+        <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        app:contentInsetLeft="0dp"
+        android:elevation="5dp"
+        app:contentInsetStart="0dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/light_white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageButton
+                android:layout_width="32dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_back"
+                android:id="@+id/back_btn"
+                android:background="@color/transparent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:layout_toRightOf="@+id/back_btn"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                />
+
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_margin="15dp"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <com.github.florent37.shapeofview.shapes.RoundRectView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="1dp"
+                app:shape_roundRect_bottomLeftRadius="3dp"
+                app:shape_roundRect_bottomRightRadius="3dp"
+                app:shape_roundRect_topLeftRadius="3dp"
+                app:shape_roundRect_topRightRadius="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/one_layout">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Swiping in"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:textColor="@color/pink_color"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="My Current Location"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:layout_alignParentRight="true"
+                            android:textColor="@color/dark_gray"/>
+
+                    </RelativeLayout>
+
+
+                <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    app:ael_expanded="true"
+                    app:ael_duration="500"
+                    app:ael_interpolator="bounce"
+                    app:ael_orientation="vertical"
+                    android:layout_below="@+id/one_layout"
+                    android:id="@+id/expandable_layout">
+
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:id="@+id/two_layout">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_centerVertical="true">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:tint="@color/pink_color"
+                            android:src="@drawable/ic_location_marker"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="My Current Location"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="5dp"/>
+
+                    </LinearLayout>
+
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:theme="@style/SCBSwitch"
+                        android:id="@+id/current_loction_switch"/>
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/two_layout">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Add New Location"
+                            android:padding="5dp"
+                            android:gravity="left"
+                            android:layout_marginRight="50dp"
+                            android:id="@+id/new_location_txt"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/pink_color"/>
+
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:theme="@style/SCBSwitch"
+                            android:id="@+id/selected_location_switch"/>
+
+
+                    </RelativeLayout>
+
+                </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+                </RelativeLayout>
+            </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+
+
+        <com.github.florent37.shapeofview.shapes.RoundRectView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="1dp"
+            android:layout_marginTop="15dp"
+            app:shape_roundRect_bottomLeftRadius="3dp"
+            app:shape_roundRect_bottomRightRadius="3dp"
+            app:shape_roundRect_topLeftRadius="3dp"
+            app:shape_roundRect_topRightRadius="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:background="@color/white">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Show me"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:textColor="@color/pink_color"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Men"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"/>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:theme="@style/SCBSwitch"
+                    android:id="@+id/men_switch"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Women"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"/>
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:theme="@style/SCBSwitch"
+                    android:id="@+id/women_switch"/>
+            </RelativeLayout>
+            </LinearLayout>
+
+        </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+
+            <com.github.florent37.shapeofview.shapes.RoundRectView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:elevation="1dp"
+                app:shape_roundRect_bottomLeftRadius="3dp"
+                app:shape_roundRect_bottomRightRadius="3dp"
+                app:shape_roundRect_topLeftRadius="3dp"
+                app:shape_roundRect_topRightRadius="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:background="@color/white">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Maximum Distance"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:textColor="@color/pink_color"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="mile"
+                        android:id="@+id/distance_txt"
+                        android:textColor="@color/black"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+
+                <com.zhouyou.view.seekbar.SignSeekBar
+                    android:id="@+id/distance_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    app:ssb_progress="10000"
+                    app:ssb_min="5"
+                    app:ssb_max="10000"
+                    app:ssb_thumb_radius="10dp"
+                    android:paddingTop="20dp"
+                    app:ssb_show_thumb_text="false"
+                    app:ssb_show_section_text="false"
+                    android:minHeight="16dp"
+                    app:ssb_second_track_color="@color/pink_color"
+                    app:ssb_thumb_color="@color/pink_color"
+                    app:ssb_track_color="@color/gainsboro"
+                    app:ssb_track_size="5dp" />
+
+            </LinearLayout>
+
+            </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+
+            <com.github.florent37.shapeofview.shapes.RoundRectView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:elevation="1dp"
+                app:shape_roundRect_bottomLeftRadius="3dp"
+                app:shape_roundRect_bottomRightRadius="3dp"
+                app:shape_roundRect_topLeftRadius="3dp"
+                app:shape_roundRect_topRightRadius="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:background="@color/white">
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Age Range"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:textColor="@color/pink_color"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Year"
+                        android:id="@+id/age_range_txt"
+                        android:textColor="@color/black"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+
+                <com.zhouyou.view.seekbar.SignSeekBar
+                    android:id="@+id/age_seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    app:ssb_progress="50"
+                    app:ssb_min="18"
+                    app:ssb_max="75"
+                    app:ssb_thumb_radius="10dp"
+                    android:paddingTop="15dp"
+                    app:ssb_second_track_color="@color/pink_color"
+                    app:ssb_thumb_color="@color/pink_color"
+                    app:ssb_track_color="@color/gainsboro"
+                    app:ssb_track_size="5dp" />
+
+            </LinearLayout>
+            </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+
+            <com.github.florent37.shapeofview.shapes.RoundRectView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:elevation="1dp"
+                app:shape_roundRect_bottomLeftRadius="3dp"
+                app:shape_roundRect_bottomRightRadius="3dp"
+                app:shape_roundRect_topLeftRadius="3dp"
+                app:shape_roundRect_topRightRadius="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:gravity="center"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Show me On Binder"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/black"/>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:theme="@style/SCBSwitch"
+                        android:id="@+id/show_me_on_binder"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+
+
+
+            <com.github.florent37.shapeofview.shapes.RoundRectView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:elevation="1dp"
+                app:shape_roundRect_bottomLeftRadius="3dp"
+                app:shape_roundRect_bottomRightRadius="3dp"
+                app:shape_roundRect_topLeftRadius="3dp"
+                app:shape_roundRect_topRightRadius="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:background="@color/white">
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Legal"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:textColor="@color/pink_color"/>
+
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Privacy Policy"
+                        android:textStyle="bold"
+                        android:textSize="14dp"
+                        android:background="@drawable/d_ripple_effect"
+                        android:paddingBottom="5dp"
+                        android:id="@+id/privacy_policy_txt"
+                        android:textColor="@color/dimgray"/>
+
+                </LinearLayout>
+            </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+
+
+            <com.github.florent37.shapeofview.shapes.RoundRectView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:elevation="1dp"
+                app:shape_roundRect_bottomLeftRadius="3dp"
+                app:shape_roundRect_bottomRightRadius="3dp"
+                app:shape_roundRect_topLeftRadius="3dp"
+                app:shape_roundRect_topRightRadius="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:id="@+id/logout_btn">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Logout"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/black"/>
+                </LinearLayout>
+
+            </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+
+            <com.github.florent37.shapeofview.shapes.RoundRectView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="25dp"
+                android:elevation="1dp"
+                android:layout_marginBottom="10dp"
+                app:shape_roundRect_bottomLeftRadius="3dp"
+                app:shape_roundRect_bottomRightRadius="3dp"
+                app:shape_roundRect_topLeftRadius="3dp"
+                app:shape_roundRect_topRightRadius="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:id="@+id/delete_account_btn">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Delete Account"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/pink_color"/>
+                </LinearLayout>
+
+            </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

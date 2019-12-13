@@ -1,0 +1,5 @@
+com.github.mmin18.realtimeblurview
+attr realtimeBlurRadius
+attr realtimeDownsampleFactor
+attr realtimeOverlayColor
+styleable RealtimeBlurView realtimeBlurRadius realtimeDownsampleFactor realtimeOverlayColor

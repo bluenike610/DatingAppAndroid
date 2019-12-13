@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Accounts.GenderActivity">
+
+    <RelativeLayout
+        android:id="@+id/backBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_use_back"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/phoneNumTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gender_txt"
+        android:textSize="40dp"
+        android:textColor="@color/text_black"
+        android:textStyle="bold"
+        android:layout_below="@+id/backBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/gender_intro"
+        android:layout_below="@+id/phoneNumTxt"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textColor="@color/text_gray"
+        android:textSize="16sp"/>
+
+    <RelativeLayout
+        android:id="@+id/femaleBtn"
+        android:layout_below="@+id/noSMSLayout"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/female_btn_0"
+        android:orientation="horizontal"/>
+
+    <RelativeLayout
+        android:id="@+id/maleBtn"
+        android:layout_below="@+id/noSMSLayout"
+        android:layout_marginTop="270dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/male_btn_0"
+        android:orientation="horizontal"/>
+
+    <RelativeLayout
+        android:id="@+id/nextBtn"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/next_btn_0"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"/>
+
+</RelativeLayout>

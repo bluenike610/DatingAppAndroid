@@ -1,0 +1,86 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/MainMenuFragment"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.datingapp.android.Main_Menu.MainMenuFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ViewPager_layout"
+        android:layout_below="@+id/toolbar">
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_height="55dp"
+            android:layout_width="200dp"
+            android:layout_centerHorizontal="true"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/black"
+            android:textAlignment="center"
+            app:tabGravity="fill"
+            app:tabPaddingStart="0dp"
+            app:tabPaddingEnd="0dp"
+            app:tabTextColor="@color/dimgray"
+            app:tabTextAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:layout_marginLeft="-1dp"
+            android:background="@color/light_white"
+            app:tabIndicatorColor="@color/transparent" />
+
+        <TextView
+            android:id="@+id/likeNumTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:gravity="center|left"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_marginLeft="-30dp"
+            android:layout_toRightOf="@+id/tabs"/>
+
+
+        <RelativeLayout
+            android:id="@+id/profileBtn"
+            android:layout_width="60dp"
+            android:layout_height="55dp"
+            android:layout_alignParentLeft="true">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_profile_tab"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/inboxBtn"
+            android:layout_width="60dp"
+            android:layout_height="55dp"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_chat_tab"/>
+
+        </RelativeLayout>
+
+        <com.datingapp.android.Main_Menu.Custom_ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tabs"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    </RelativeLayout>
+
+</FrameLayout>

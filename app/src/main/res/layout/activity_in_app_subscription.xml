@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".InAppSubscription.InApp_Subscription_A">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.github.mmin18.widget.RealtimeBlurView
+            android:id="@+id/blur_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:realtimeBlurRadius="10dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:alpha="0.4"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:riv_corner_radius_top_left="15dp"
+                    app:riv_corner_radius_top_right="15dp"
+                    android:src="@drawable/inapp_back"/>
+
+                <ImageView
+                    android:id="@+id/inappIntroImg"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/inapp_intro_item1"
+                    android:layout_marginTop="90dp"/>
+
+                <TextView
+                    android:id="@+id/inappIntroTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/inapp_intro_1"
+                    android:layout_below="@+id/inappIntroImg"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/black"
+                    android:layout_centerHorizontal="true"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_above="@+id/inappBtnGroup"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        android:id="@+id/inappIndicate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/inapp_intro_indi_1"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/inappBtnGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:weightSum="3"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/inappItem1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/gray">
+
+                        <TextView
+                            android:id="@+id/monthTxt1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12"
+                            android:textStyle="bold"
+                            android:textSize="36sp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/black"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"/>
+
+                        <TextView
+                            android:id="@+id/monthTxt11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ヶ月"
+                            android:textSize="12sp"
+                            android:layout_below="@+id/monthTxt1"
+                            android:textColor="@color/black"
+                            android:layout_centerHorizontal="true"/>
+
+                        <TextView
+                            android:id="@+id/monthTxt12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="¥3,000/月"
+                            android:textSize="12sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@+id/monthTxt11"
+                            android:textColor="@color/black"
+                            android:layout_centerHorizontal="true"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/inappItem2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/inapp_item_back">
+
+                        <TextView
+                            android:id="@+id/monthTxt2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="6"
+                            android:textStyle="bold"
+                            android:textSize="36sp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/black"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"/>
+
+                        <TextView
+                            android:id="@+id/monthTxt21"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ヶ月"
+                            android:textSize="12sp"
+                            android:layout_below="@+id/monthTxt2"
+                            android:textColor="@color/black"
+                            android:layout_centerHorizontal="true"/>
+
+                        <TextView
+                            android:id="@+id/monthTxt22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="¥3,300/月"
+                            android:textSize="12sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@+id/monthTxt21"
+                            android:textColor="@color/black"
+                            android:layout_centerHorizontal="true"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/inappItem3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/gray">
+
+                        <TextView
+                            android:id="@+id/monthTxt3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1"
+                            android:textStyle="bold"
+                            android:textSize="36sp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/black"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"/>
+
+                        <TextView
+                            android:id="@+id/monthTxt31"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ヶ月"
+                            android:textSize="12sp"
+                            android:layout_below="@+id/monthTxt3"
+                            android:textColor="@color/black"
+                            android:layout_centerHorizontal="true"/>
+
+                        <TextView
+                            android:id="@+id/monthTxt32"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="¥3,600/月"
+                            android:textSize="12sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@+id/monthTxt31"
+                            android:textColor="@color/black"
+                            android:layout_centerHorizontal="true"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_with_background"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_centerInParent="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:gravity="center">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="@drawable/continue_btn"
+                        android:id="@+id/purchase_btn"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/inapp_close"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:padding="3dp"
+                    android:id="@+id/Goback"
+                    android:textColor="@color/dark_gray"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

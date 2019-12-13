@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Accounts.PhoneNumberActivity">
+
+    <RelativeLayout
+        android:id="@+id/backBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_back"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/phoneNumTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phone_num"
+        android:textSize="40dp"
+        android:textColor="@color/text_black"
+        android:textStyle="bold"
+        android:layout_below="@+id/backBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/phone_num_intro"
+        android:layout_below="@+id/phoneNumTxt"
+        android:textColor="@color/text_gray"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textSize="16sp"/>
+
+    <RelativeLayout
+        android:id="@+id/phoneNumLayout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/phone_num_bac"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_centerVertical="true">
+
+        <LinearLayout
+            android:id="@+id/flagLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/countryFlag"
+                android:layout_width="32dp"
+                android:layout_height="25dp"
+                android:src="@drawable/jp"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/phoneText"
+            android:layout_toRightOf="@+id/separate"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/text_gray"
+            android:maxLength="13"
+            android:background="@color/transfer"
+            android:inputType="phone"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/nextBtn"
+        android:layout_below="@+id/phoneNumLayout"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/next_btn_0"
+        android:orientation="horizontal"/>
+
+</RelativeLayout>
